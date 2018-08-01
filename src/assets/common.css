@@ -1,0 +1,6 @@
+.bk-line {
+  height: 1px;
+  margin: 0 24px;
+  transform: scaleY(0.5);
+  background: #E4E6F0;
+}
