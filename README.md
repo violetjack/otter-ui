@@ -1,5 +1,7 @@
 # otter-ui
 
+![封面](http://git.lianjia.com/ptc-csd/otter-ui/raw/master/src/assets/logo.png)
+
 贝壳生活项目中使用到的UI汇总，参照了 mint-ui 来进行设计和开发。
 
 ## 调试
