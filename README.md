@@ -18,16 +18,33 @@ npm run serve
 ```js
 import Vue from 'vue'
 import OtterUI from './otter-ui/index.js'
-import 'otter-ui/index.css'
 
 Vue.use(OtterUI)
 ```
 
-## TODO
+## 组件库定位
 
-* 完成几个弹出框的逻辑实现。
-* 将搜索框和扫码按钮归入 otter-ui
-* 为组件都写上 README
-* 整理属性命名。
-* 对比参照 mint-ui 进行一轮优化
-* 发布 0.1 版本
+解决基于 otter UI 设计规范的 UI 设计稿来快速搭建前端项目。而对于一些特殊组件库建议使用网络资源会更加稳定和可靠。
+
+## 已完成组件
+
+* article
+* button
+* cell
+* cell-input
+* input
+* loading
+* message
+* nav
+* point-item
+* search-bar
+* tag
+* toast
+
+## 之后计划
+
+* 参照 mint-ui 将一些通用组件收入进来
+* 推动 UI 一起规范更多组件规范
+* 收集项目中用到了通用组件
+* 将项目打包发布到链家 npm
+* 不断迭代优化组件库
