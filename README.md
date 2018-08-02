@@ -24,7 +24,7 @@ Vue.use(OtterUI)
 ## TODO
 
 * 完成几个弹出框的逻辑实现。
-* 将搜索框和扫码按钮归入 bk-ui
+* 将搜索框和扫码按钮归入 otter-ui
 * 为组件都写上 README
 * 整理属性命名。
 * 对比参照 mint-ui 进行一轮优化

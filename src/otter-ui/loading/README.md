@@ -7,19 +7,19 @@
 ### open
 
 ```js
-this.$bkloading.open('加载中……')
+this.$loading.open('加载中……')
 ```
 
 ### close
 
 ```js
-this.$bkloading.close()
+this.$loading.close()
 ```
 
 ## 当做组件使用
 
 ```html
-<bk-loading text="加载中！"
+<otter-loading text="加载中！"
   v-show="showLoading"
   keep-holder/>
 ```

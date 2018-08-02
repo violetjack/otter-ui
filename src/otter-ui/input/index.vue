@@ -1,16 +1,16 @@
 <template>
-  <div class="bk-input">
+  <div class="otter-input">
     <input
       v-model="currentValue"
       :placeholder="placeholder"
       :disabled="disabled"
-      class="bk-input__inner">
+      class="otter-input__inner">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BkInput',
+  name: 'OtterInput',
   props: {
     value: {
       type: [String, Number],
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-input
+.otter-input
   font-family PingFangSC-Regular
   width 100%
   position relative
@@ -63,5 +63,47 @@ export default {
     outline none
     transition border-color .2s cubic-bezier(.645,.045,.355,1)
     width 100%
+    color: #101D37;
+    letter-spacing: 0;
+
+  &__clear
+    width 14px
+    height 14px
+
+  ::-weotterit-input-placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
+
+  :-moz-placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
+
+  ::-moz-placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
+
+  :-ms-input-placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
+
+  ::-ms-input-placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
+
+  ::placeholder
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #9399A5;
+    letter-spacing: 0;
 </style>
 

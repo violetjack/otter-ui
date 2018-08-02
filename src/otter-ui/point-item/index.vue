@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bk-list-item-container">
+    <div class="otter-point-item">
       <div class="strong point">•</div>
       <div class="strong"><slot/></div>
     </div>
@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: 'BkPointItem'
+  name: 'OtterPointItem'
 }
 </script>
 
 <style lang="stylus" scoped>
-.bk-list-item-container
+.otter-point-item
   display: flex;
   flex-direction: row;
   align-items: flex-start;

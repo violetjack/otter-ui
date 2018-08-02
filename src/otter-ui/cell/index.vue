@@ -1,40 +1,40 @@
 <template>
   <div
-    class="bk-cell"
+    class="otter-cell"
     @click="handleClick">
-    <div class="bk-cell-content">
-      <div class="bk-cell-area bk-cell-area-left">
+    <div class="otter-cell-content">
+      <div class="otter-cell-area otter-cell-area-left">
         <img
           v-show="img != ''"
           :src="img"
-          class="bk-cell-icon">
-        <div class="bk-cell-title">{{ label }}</div>
+          class="otter-cell-icon">
+        <div class="otter-cell-title">{{ label }}</div>
       </div>
-      <div class="bk-cell-area bk-cell-area-right">
+      <div class="otter-cell-area otter-cell-area-right">
         <div
           v-if="showDefault"
-          class="bk-cell-value-default">{{ placeholder }}</div>
+          class="otter-cell-value-default">{{ placeholder }}</div>
         <div
           v-else
-          class="bk-cell-value">
-          <div class="bk-cell-value__text">{{ value }}</div>
+          class="otter-cell-value">
+          <div class="otter-cell-value__text">{{ value }}</div>
           <slot/>
         </div>
         <img
           v-if="isLink"
-          class="bk-cell-enter"
+          class="otter-cell-enter"
           src="./img/right.png">
       </div>
     </div>
     <div
       v-if="hasLine"
-      class="bk-cell-line"/>
+      class="otter-row-line-g"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BkCell',
+  name: 'OtterCell',
   props: {
     to: {
       type: [String, Object],
@@ -83,21 +83,21 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-cell {
+.otter-cell {
   height: 60px;
   padding-left: 24px;
   padding-right: 24px;
   background: #ffffff;
 }
 
-.bk-cell:active {
+.otter-cell:active {
   height: 60px;
   padding-left: 24px;
   padding-right: 24px;
   background: #f8f8f9;
 }
 
-.bk-cell-content {
+.otter-cell-content {
   height: 59px;
   display: flex;
   flex-direction: row;
@@ -105,39 +105,39 @@ export default {
   align-items: center;
 }
 
-.bk-cell-area {
+.otter-cell-area {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
 }
-.bk-cell-area-left {
+.otter-cell-area-left {
   min-width 80px
 }
-.bk-cell-area-right {
+.otter-cell-area-right {
   flex: 1;
   justify-content flex-end
 }
 
-.bk-cell-line {
+.otter-cell-line {
   height: 1px;
   background: #e4e6f0;
   transform: scaleY(0.5)
 }
 
-.bk-cell-icon {
+.otter-cell-icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
 
-.bk-cell-enter {
+.otter-cell-enter {
   width: 16px;
   height: 16px;
   margin-left: 3px;
 }
 
-.bk-cell-title {
+.otter-cell-title {
   font-family: PingFangSC-Medium;
   font-size: 16px;
   color: #101d37;
@@ -145,7 +145,7 @@ export default {
   margin-right: 10px;
 }
 
-.bk-cell-value
+.otter-cell-value
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -161,7 +161,7 @@ export default {
     letter-spacing: 0;
     overflow: auto;
 
-.bk-cell-value-default {
+.otter-cell-value-default {
   font-family: PingFangSC-Regular;
   font-size: 16px;
   color: #9399a5;

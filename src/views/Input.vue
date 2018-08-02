@@ -1,6 +1,6 @@
 <template>
   <div class="input-demo-container">
-    <bk-input v-model="inputValue" placeholder="请输入" />
+    <otter-input v-model="inputValue" placeholder="请输入" />
     <h1>输出结果：{{ inputValue }}</h1>
   </div>
 </template>

@@ -1,27 +1,27 @@
 <template>
-  <div class="bk-cell-input">
-    <div class="bk-cell-container">
-      <div class="title">{{ label }}</div>
-      <div class="cell-input-container">
+  <div class="otter-cell-input">
+    <div class="otter-cell-input-container">
+      <div class="otter-cell-input-container--label">{{ label }}</div>
+      <div class="otter-cell-input-container--input-container">
         <input
           :placeholder="placeholder"
           v-model="currentValue"
           :maxlength="maxlength"
           :ng-pattern="ngPattern"
-          class="cell-input"
+          class="otter-cell-input-container--input"
           @focus="handleFocus"
           :onkeypress="onkeypress"
           @blur="handleBlur">
-          <img v-show="currentValue !== ''" @click="currentValue = ''" class="cell-input-clear" src="./img/delete.png"/>
+          <img v-show="currentValue !== ''" @click="currentValue = ''" class="otter-cell-input-container--clear" src="./img/delete.png"/>
       </div>  
     </div>
-    <div class="bk-cell-line"/>
+    <div class="otter-cell-input-line otter-row-line-g"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BkCellInput',
+  name: 'OtterCellInput',
   props: {
     label: {
       type: String,
@@ -80,28 +80,28 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .bk-cell-container
+  .otter-cell-input-container
     display flex
     justify-content space-between
     align-items center
     height 60px
     padding 0 24px
 
-    .title
+    &--label
       font-family: PingFangSC-Medium;
       font-size: 16px;
       color: #101D37;
       letter-spacing: 0;
 
-    .cell-input-container
+    &--input-container
       display flex
       flex-direction row
       align-items center
 
-    .cell-input
+    &--input
       width: 130px;
       height: 30px;
-      -webkit-appearance: none;
+      -weotterit-appearance: none;
       background: none;
       border: none;
       box-sizing: border-box;
@@ -114,11 +114,11 @@ export default {
       letter-spacing: 0;
       text-align: right;
 
-    .cell-input-clear
+    &--clear
       width 14px
       height 14px
 
-    ::-webkit-input-placeholder
+    ::-weotterit-input-placeholder
       font-family: PingFangSC-Regular;
       font-size: 16px;
       color: #9399A5;
@@ -160,34 +160,7 @@ export default {
       letter-spacing: 0;
       text-align: right;
 
-    .label-container
-      display flex
-      flex-direction row
-      justify-content flex-end
-      align-items center
-
-      .label
-        font-family: PingFangSC-Regular;
-        font-size: 16px;
-        color: #101D37;
-        letter-spacing: 0;
-        text-align: right;
-
-      .label__placeholder
-        font-family: PingFangSC-Regular;
-        font-size: 16px;
-        color: #9399A5;
-        letter-spacing: 0;
-        text-align: right;
-
-      img
-        width 16px
-        height 16px
-
-  .bk-cell-line
-    height 1px
-    transform scaleY(0.5)
+  .otter-cell-input-line
     margin 0 24px
-    background: #E4E6F0;
 
 </style>

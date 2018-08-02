@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bk-cell-input
+    <otter-cell-input
       label="手机号"
       v-model="inputValue"
       maxlength="20"
@@ -19,7 +19,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

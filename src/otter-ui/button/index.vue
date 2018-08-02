@@ -1,9 +1,9 @@
 <template>
   <div
-    :class="[`bk-button--${type}${plain?'-plain':''}`, 'bk-button--' + size]"
-    class="bk-button"
+    :class="[`otter-button--${type}${plain?'-plain':''}`, 'otter-button--' + size]"
+    class="otter-button"
     @click="handleClick">
-    <div class="bk-button-text--base bk-button-text--color">
+    <div class="otter-button-text--base otter-button-text--color">
       <slot/>
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'BkButton',
+  name: 'OtterButton',
   props: {
     type: {
       type: String,
@@ -39,73 +39,73 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-button {
+.otter-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bk-button--small {
+.otter-button--small {
   height: 44px;
   border-radius: 4px;
 }
 
-.bk-button--normal {
+.otter-button--normal {
   height: 50px;
   border-radius: 5px;
 }
 
-.bk-button-text--base {
+.otter-button-text--base {
   font-family: PingFangSC-Medium;
   font-size: 16px;
   letter-spacing: 0;
   text-align: center;
 }
 
-.bk-button--primary {
+.otter-button--primary {
   background-image: linear-gradient(148deg, #6898f8 0%, #2c68e0 100%);
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #FFFFFF;
   }
 }
 
-.bk-button--success {
+.otter-button--success {
   background-image: linear-gradient(147deg, #47CC95 0%, #26B478 100%);
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #FFFFFF;
   }
 }
 
-.bk-button--cancel {
+.otter-button--cancel {
   background: #F8F8F9;
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #9399A5;
   }
 }
 
-.bk-button--primary-plain {
+.otter-button--primary-plain {
   border: 1px solid #3072F6;
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #3072F6;
   }
 }
 
-.bk-button--success-plain {
+.otter-button--success-plain {
   border: 1px solid #47CC95;
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #47CC95;
   }
 }
 
-.bk-button--cancel-plain {
+.otter-button--cancel-plain {
   background #9399A5
 
-  .bk-button-text--color {
+  .otter-button-text--color {
     color: #F8F8F9;
   }
 }

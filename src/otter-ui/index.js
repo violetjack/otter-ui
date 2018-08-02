@@ -22,16 +22,16 @@ const install = function (Vue) {
   Vue.component(Button.name, Button)
   Vue.component(Cell.name, Cell)
   Vue.component(CellInput.name, CellInput)
+  Vue.component(ConfirmBox.name, ConfirmBox)
   Vue.component(Input.name, Input)
   Vue.component(LoadingComp.name, LoadingComp)
   Vue.component(Nav.name, Nav)
   Vue.component(PointItem.name, PointItem)
   Vue.component(SearchBar.name, SearchBar)
   Vue.component(Tag.name, Tag)
-  Vue.component(ConfirmBox.name, ConfirmBox)
 
-  Vue.prototype.$bkloading = Loading
-  Vue.prototype.$bktoast = Toast
+  Vue.prototype.$loading = Loading
+  Vue.prototype.$toast = Toast
 }
 
 export default {
@@ -41,9 +41,9 @@ export default {
   Button,
   Cell,
   CellInput,
+  ConfirmBox,
   Input,
   Loading,
-  ConfirmBox,
   Nav,
   PointItem,
   SearchBar,

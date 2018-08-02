@@ -10,7 +10,6 @@ import Loading from './views/Loading.vue'
 import Message from './views/Message.vue'
 import Nav from './views/Nav.vue'
 import PointItem from './views/PointItem.vue'
-import ScanIcon from './views/ScanIcon.vue'
 import SearchBar from './views/SearchBar.vue'
 import Tag from './views/Tag.vue'
 import Toast from './views/Toast.vue'
@@ -63,11 +62,6 @@ export const compRoutes = [
     path: '/point-item',
     name: 'point-item',
     component: PointItem
-  },
-  {
-    path: '/scan-icon',
-    name: 'scan-icon',
-    component: ScanIcon
   },
   {
     path: '/search-bar',

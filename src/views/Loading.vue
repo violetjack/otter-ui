@@ -1,8 +1,8 @@
 <template>
   <div>
-    <bk-button @click="showLoading">js loading</bk-button>
-    <bk-button @click="showLoading02">html loading</bk-button>
-    <bk-loading text="HTML 加载中！"
+    <otter-button @click="showLoading">js loading</otter-button>
+    <otter-button @click="showLoading02">html loading</otter-button>
+    <otter-loading text="HTML 加载中！"
       v-if="showHTMLLoading"
       keep-holder/>
   </div>
@@ -20,9 +20,9 @@ export default {
   },
   methods: {
     showLoading() {
-      this.$bkloading.open('JS 加载中!')
+      this.$loading.open('JS 加载中!')
       setTimeout(() => {
-        this.$bkloading.close()
+        this.$loading.close()
       }, 3000)
     },
     showLoading02() {
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-  .bk-button {
+  .otter-button {
     margin: 20px;
   }
 </style>

@@ -1,16 +1,16 @@
-.bk-row-line-g {
+.otter-row-line-g {
   height: 1px;
   transform: scaleY(.5);
   background: #e4e6f0;
 }
 
-.bk-col-line-g {
+.otter-col-line-g {
   width: 1px;
   transform: scaleX(.5);
   background: #e4e6f0;
 }
 
-.bk-text-title {
+.otter-text-title {
   font-family: PingFangSC-Medium;
   font-size: 24px;
   color: #030303;
@@ -18,7 +18,7 @@
   line-height: 30px;
 }
 
-.bk-text-content {
+.otter-text-content {
   font-family: PingFangSC-Regular;
   font-size: 16px;
   line-height: 22px;
@@ -26,7 +26,7 @@
   letter-spacing: -0.1px;
 }
 
-.bk-text-hint {
+.otter-text-hint {
   font-family: PingFangSC-Regular;
   font-size: 12px;
   color: #9399A5;
@@ -34,7 +34,7 @@
   line-height: 16px;
 }
 
-.bk-flex-container-center {
+.otter-flex-container-center {
   display: flex;
   justify-content: center;
   align-items: center;

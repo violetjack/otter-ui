@@ -1,13 +1,13 @@
 <template>
-  <transition name="bk-loading">
+  <transition name="otter-loading">
     <div
       v-show="visible"
-      class="bk-loading"
+      class="otter-loading"
       @click="stopClick">
-      <div class="bk-loading__pop">
+      <div class="otter-loading__pop">
         <img
           src="./img/Loading.png"
-          class="bk-loading__loading">
+          class="otter-loading__loading">
         <div>{{ text }}</div>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
 <script type="text/babel">
 export default {
-  name: 'BkLoading',
+  name: 'OtterLoading',
   props: {
     text: {
       type: String,
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-loading
+.otter-loading
   z-index: 3000;
   position: fixed;
   top: 0;
@@ -99,7 +99,7 @@ export default {
   }
 }
 
-.bk-loading__loading {
+.otter-loading__loading {
   animation-name: rotate;
   -webkit-animation-name: rotate;
   animation-duration: 1.5s;
@@ -110,13 +110,13 @@ export default {
   -webkit-animation-timing-function: linear;
 }
 
-.bk-loading-enter-active,
-.bk-loading-leave-active {
+.otter-loading-enter-active,
+.otter-loading-leave-active {
   transition: opacity 0.2s;
 }
 
-.bk-loading-enter,
-.bk-loading-leave-to {
+.otter-loading-enter,
+.otter-loading-leave-to {
   opacity: 0;
 }
 </style>

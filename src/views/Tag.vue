@@ -1,7 +1,7 @@
 <template>
   <div>
-    <bk-tag @click="selectNormal = !selectNormal" :selected="selectNormal">normal</bk-tag>
-    <bk-tag @click="selectSmall = !selectSmall" :selected="selectSmall" size="small">small</bk-tag>
+    <otter-tag @click="selectNormal = !selectNormal" :selected="selectNormal">normal</otter-tag>
+    <otter-tag @click="selectSmall = !selectSmall" :selected="selectSmall" size="small">small</otter-tag>
   </div>
 </template>
 

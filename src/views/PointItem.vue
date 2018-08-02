@@ -1,10 +1,10 @@
 <template>
   <div>
-    <bk-point-item>勇士</bk-point-item>
-    <bk-point-item>火箭</bk-point-item>
-    <bk-point-item>雷霆</bk-point-item>
-    <bk-point-item>马刺</bk-point-item>
-    <bk-point-item>湖人</bk-point-item>
+    <otter-point-item>勇士</otter-point-item>
+    <otter-point-item>火箭</otter-point-item>
+    <otter-point-item>雷霆</otter-point-item>
+    <otter-point-item>马刺</otter-point-item>
+    <otter-point-item>湖人</otter-point-item>
   </div>
 </template>
 

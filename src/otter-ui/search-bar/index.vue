@@ -1,5 +1,5 @@
 <template>
-  <div class="bk-switch-search-wrapper">
+  <div class="otter-search-bar">
     <img
       class="icon search"
       src="./img/search.png">
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'BkSearchBar',
+  name: 'OtterSearchBar',
   props: {
     value: {
       type: String,
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-switch-search-wrapper {
+.otter-search-bar {
   background: #F8F8F9;
   border-radius: 100px;
   height: 30px;

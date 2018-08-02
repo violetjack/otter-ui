@@ -1,5 +1,5 @@
 <template>
-  <div class="bk-switch-tag-wrapper">
+  <div class="otter-switch-tag-wrapper">
     <div class="area text">{{ area }}</div>
     <div class="address text">{{ address }}</div>
   </div>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-	.bk-switch-tag-wrapper
+	.otter-switch-tag-wrapper
 		display flex
 		justify-content center
 		align-items center

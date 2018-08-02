@@ -9,7 +9,7 @@ Messbox 消息框显示内容。
 输入文本的确认框，使用 html 引入的方式使用。
 
 ```html
-  <bk-confirm-box
+  <otter-confirm-box
     :visible="showOrderBox"
     title="请输入快递单号查询"
     maxlength="30"

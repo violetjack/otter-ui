@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bk-search-bar
+    <otter-search-bar
       v-model="searchValue"
       placeholder="请输入查询地址"
       @focus="log('focus')"

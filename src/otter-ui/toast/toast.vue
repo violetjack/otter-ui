@@ -1,9 +1,9 @@
 <template>
-  <transition name="bk-toast">
+  <transition name="otter-toast">
     <div
       v-show="visible"
-      class="pop"
-      :class="'toast-place-' + position">
+      class="otter-toast"
+      :class="'otter-toast-place-' + position">
       <img
         v-if="iconType==='right'"
         src="./img/RightHook.png">
@@ -50,25 +50,25 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .toast-place-top {
+  .otter-toast-place-top {
     top: 50px;
     left: 50%;
     transform: translate(-50%, 0);
   }
   
-  .toast-place-middle {
+  .otter-toast-place-middle {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   
-  .toast-place-bottom {
+  .otter-toast-place-bottom {
     bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
   }
 
-  .pop
+  .otter-toast
     background rgba(26, 26, 26, 0.95)
     box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.2)
     border-radius 4px
@@ -94,9 +94,9 @@ export default {
       line-height 20px
       overflow hidden
 
-.bk-toast-enter-active, .bk-toast-leave-active
+.otter-toast-enter-active, .otter-toast-leave-active
   transition opacity 0.2s
 
-.bk-toast-enter, .bk-toast-leave-to
+.otter-toast-enter, .otter-toast-leave-to
   opacity 0
 </style>

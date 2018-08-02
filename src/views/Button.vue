@@ -1,12 +1,12 @@
 <template>
   <div class="button-container">
-    <bk-button type="primary">primary</bk-button>
-    <bk-button type="success">success</bk-button>
-    <bk-button type="cancel">cancel</bk-button>
-    <bk-button type="primary" plain>primary</bk-button>
-    <bk-button type="success" plain>success</bk-button>
-    <bk-button type="cancel" plain>cancel</bk-button>
-    <bk-button size="small">small</bk-button>
+    <otter-button type="primary">primary</otter-button>
+    <otter-button type="success">success</otter-button>
+    <otter-button type="cancel">cancel</otter-button>
+    <otter-button type="primary" plain>primary</otter-button>
+    <otter-button type="success" plain>success</otter-button>
+    <otter-button type="cancel" plain>cancel</otter-button>
+    <otter-button size="small">small</otter-button>
   </div>
 </template>
 
@@ -14,6 +14,6 @@
   .button-container
     padding 25px;
   
-    .bk-button
+    .otter-button
       margin 10px 0
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <bk-button @click="showMessage = true">显示 message box</bk-button>
-    <bk-confirm-box
+    <otter-button @click="showMessage = true">显示 message box</otter-button>
+    <otter-confirm-box
       :visible="showMessage"
       title="请输入快递单号查询"
       maxlength="30"
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     handleOrderConfirm(val) {
-      this.$bktoast(val)
+      this.$toast(val)
       this.showMessage = false
     }
   }
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped>
-  .bk-button {
+  .otter-button {
     margin: 20px;
   }
 </style>

@@ -1,28 +1,28 @@
 <template>
-  <transition name="bk-message">
+  <transition name="otter-message">
     <message-popup v-show="visible">
-      <div class="bk-message">
+      <div class="otter-message">
         <img
-          class="bk-message__btn-close"
+          class="otter-message__btn-close"
           src="./img/Close.png"
           @click="handleClose">
-        <div class="bk-message__title">{{ title }}</div>
+        <div class="otter-message__title">{{ title }}</div>
         <input
           v-model="currentValue"
           :placeholder="placeholder"
           :type="inputType"
           :maxlength="maxlength"
-          class="bk-message__input">
-        <div class="bk-message__line"/>
-        <div class="bk-message-button-group">
-          <bk-button
+          class="otter-message__input">
+        <div class="otter-message__line"/>
+        <div class="otter-message-button-group">
+          <otter-button
             type="cancel"
             size="small"
-            @click="handleCancel">{{ cancelText }}</bk-button>
-          <bk-button
+            @click="handleCancel">{{ cancelText }}</otter-button>
+          <otter-button
             type="primary"
             size="small"
-            @click="handleConfirm">{{ confirmText }}</bk-button>
+            @click="handleConfirm">{{ confirmText }}</otter-button>
         </div>
       </div>
     </message-popup>
@@ -33,7 +33,7 @@
 import MessagePopup from '../message-popup'
 
 export default {
-  name: 'BkConfirmBox',
+  name: 'OtterConfirmBox',
   components: {
     MessagePopup
   },
@@ -102,7 +102,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-message
+.otter-message
   width 275px
   display flex
   flex-direction column
@@ -126,7 +126,7 @@ export default {
     width 235px
     height 44px
     margin-top 30px
-    -webkit-appearance none
+    -weotterit-appearance none
     background-color transparent
     background-image none
     border none
@@ -138,7 +138,7 @@ export default {
     transition border-color .2s cubic-bezier(.645,.045,.355,1)
     width 100%
 
-  ::-webkit-input-placeholder
+  ::-weotterit-input-placeholder
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #9399A5;
@@ -185,13 +185,13 @@ export default {
     display flex
     flex-direction row
 
-    .bk-button
+    .otter-button
       width 113.5px
       margin-right 8.5px
 
-.bk-message-enter-active, .bk-message-leave-active
+.otter-message-enter-active, .otter-message-leave-active
   transition opacity 0.2s
 
-.bk-message-enter, .bk-message-leave-to
+.otter-message-enter, .otter-message-leave-to
   opacity 0
 </style>

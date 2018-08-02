@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <img class="logo" :src="Logo"/>
-    <bk-cell
+    <otter-cell
       v-for="(item, index) of list"
       :key="index"
       :label="item.label"

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import OtterUI from './otter-ui/index.js'
-import '@/otter-ui/index.css'
+// import '@/otter-ui/index.css'
 import '@/assets/common.css'
 import App from './App.vue'
 import router from './router'

@@ -1,19 +1,19 @@
 <template>
   <div
-    class="bk-nav-container"
+    class="otter-nav"
     @click="handleClick">
-    <div :class="selected?'select':'unselect'">
+    <div :class="selected?'otter-nav--select':'otter-nav--unselect'">
       <slot/>
     </div>
     <div
       v-show="selected"
-      class="select-line"/>
+      class="otter-nav--line"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BkNav',
+  name: 'OtterNav',
   props: {
     selected: {
       type: Boolean,
@@ -29,38 +29,35 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bk-nav-container {
+.otter-nav
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   height: 50px;
   padding: 0 40px;
-}
 
-  .select {
+  &--select
     font-family: PingFangSC-Medium;
     font-size: 16px;
     color: #3072f6;
     letter-spacing: 0;
     text-align: center;
     margin-top: 14px;
-  }
 
-  .unselect {
+  &--unselect
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #9297a6;
     letter-spacing: 0;
     text-align: center;
     margin-top: 14px;
-  }
 
-  .select-line {
+  &--line
     margin-top: 4px;
     width: 20px;
     height: 3px;
     background: #3072f6;
     border-radius: 3px;
-  }
+    
 </style>

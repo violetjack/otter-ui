@@ -1,14 +1,14 @@
 <template>
   <div
-    class="bk-message-popup">
-    <div class="bk-message-popup__pop">
+    class="otter-message-popup">
+    <div class="otter-message-popup__pop">
       <slot/>
     </div>
   </div>
 </template>
 
 <style lang="stylus" scoped>
-.bk-message-popup
+.otter-message-popup
   position: fixed;
   top: 0;
   left: 0;
