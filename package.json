@@ -1,12 +1,13 @@
 {
   "name": "otter-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --dest lib --name otter-ui src/otter-ui/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "lib/otter-ui.common.js",
   "dependencies": {
     "mint-ui": "^2.2.13",
     "vue": "^2.5.16",
