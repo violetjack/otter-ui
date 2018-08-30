@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
     background: #fcfcfc;
     border-radius: 5px;
     width: 315px;
-    height 289px;
+    margin-bottom 20px
     display: flex;
     flex-direction: column;
     align-items: flex-start;

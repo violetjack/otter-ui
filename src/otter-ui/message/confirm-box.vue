@@ -17,11 +17,9 @@
         <div class="otter-message-button-group">
           <otter-button
             type="cancel"
-            size="small"
             @click="handleCancel">{{ cancelText }}</otter-button>
           <otter-button
             type="primary"
-            size="small"
             @click="handleConfirm">{{ confirmText }}</otter-button>
         </div>
       </div>
@@ -125,6 +123,7 @@ export default {
   &__input
     width 235px
     height 44px
+    padding 0
     margin-top 30px
     -weotterit-appearance none
     background-color transparent
@@ -184,6 +183,7 @@ export default {
   &-button-group
     display flex
     flex-direction row
+    margin-bottom 60px
 
     .otter-button
       width 113.5px
