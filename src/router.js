@@ -14,6 +14,8 @@ import SearchBar from './views/SearchBar.vue'
 import Tag from './views/Tag.vue'
 import Toast from './views/Toast.vue'
 import CommonCss from './views/CommonCss.vue'
+import Actionsheet from './views/Actionsheet.vue'
+
 
 Vue.use(Router)
 
@@ -82,6 +84,11 @@ export const compRoutes = [
     path: '/common-css',
     name: 'common-css',
     component: CommonCss
+  },
+  {
+    path: '/action-sheet',
+    name: 'action-sheet',
+    component: Actionsheet,
   }
 ]
 

@@ -1,23 +1,25 @@
-import './index.css'
-import Article from './article'
-import Button from './button'
-import Cell from './cell'
-import CellInput from './cell-input'
-import ConfirmBox from './message/confirm-box'
-import Input from './input'
-import Loading from './loading'
-import LoadingComp from './loading/loading'
-import Nav from './nav'
-import PointItem from './point-item'
-import SearchBar from './search-bar'
-import Tag from './tag'
-import Toast from './toast'
+import './packages/index.css'
+import Actionsheet from './packages/actionsheet'
+import Article from './packages/article'
+import Button from './packages/button'
+import Cell from './packages/cell'
+import CellInput from './packages/cell-input'
+import ConfirmBox from './packages/message/confirm-box'
+import Input from './packages/input'
+import Loading from './packages/loading'
+import LoadingComp from './packages/loading/loading'
+import Nav from './packages/nav'
+import PointItem from './packages/point-item'
+import SearchBar from './packages/search-bar'
+import Tag from './packages/tag'
+import Toast from './packages/toast'
 
 
-const version = '2.2.13'
+const version = '0.1.3'
 const install = function (Vue) {
   if (install.installed) { return }
 
+  Vue.component(Actionsheet.name, Actionsheet)
   Vue.component(Article.name, Article)
   Vue.component(Button.name, Button)
   Vue.component(Cell.name, Cell)
