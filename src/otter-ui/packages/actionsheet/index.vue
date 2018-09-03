@@ -45,11 +45,12 @@
   .actionsheet-float-enter,
   .actionsheet-float-leave-active
     transform: translate3d(-50%, 100%, 0);
+
 </style>
 
 <script type="text/babel">
-  import Popup from 'mint-ui/src/utils/popup';
-  import 'mint-ui/src/style/popup.css';
+  import Popup from '../../src/utils/popup';
+  import '../../src/style/popup.css';
 
   export default {
     name: 'mt-actionsheet',

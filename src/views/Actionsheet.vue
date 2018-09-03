@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .page-actionsheet
       &-wrapper
         padding: 0 20px;

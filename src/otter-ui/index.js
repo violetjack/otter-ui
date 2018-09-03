@@ -1,6 +1,7 @@
 import './packages/index.css'
 import Actionsheet from './packages/actionsheet'
 import Article from './packages/article'
+import Badge from './packages/badge'
 import Button from './packages/button'
 import Cell from './packages/cell'
 import CellInput from './packages/cell-input'
@@ -21,6 +22,7 @@ const install = function (Vue) {
 
   Vue.component(Actionsheet.name, Actionsheet)
   Vue.component(Article.name, Article)
+  Vue.component(Badge.name, Badge)
   Vue.component(Button.name, Button)
   Vue.component(Cell.name, Cell)
   Vue.component(CellInput.name, CellInput)

@@ -15,6 +15,7 @@ import Tag from './views/Tag.vue'
 import Toast from './views/Toast.vue'
 import CommonCss from './views/CommonCss.vue'
 import Actionsheet from './views/Actionsheet.vue'
+import Badge from './views/Badge.vue'
 
 
 Vue.use(Router)
@@ -88,7 +89,12 @@ export const compRoutes = [
   {
     path: '/action-sheet',
     name: 'action-sheet',
-    component: Actionsheet,
+    component: Actionsheet
+  },
+  {
+    path: '/badge',
+    name: 'badge',
+    component: Badge
   }
 ]
 
