@@ -1,5 +1,5 @@
 <template>
-  <button
+  <div
     class="otter-button"
     :class="[`otter-button--${type}${plain?'-plain':''}`, 'otter-button--' + size]"
     @click="handleClick"
@@ -7,7 +7,7 @@
     <div class="otter-button-text--base otter-button-text--color">
       <slot/>
     </div>
-  </button>
+  </div>
 </template>
 
 <script>
@@ -45,7 +45,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width 100%
 }
 
 .otter-button--small {

@@ -2,8 +2,8 @@
   <div class="page-actionsheet">
     <h1 class="page-title">Action Sheet</h1>
     <div class="page-actionsheet-wrapper">
-      <otter-button @click.native="sheetVisible = true" size="large">点击上拉 action sheet</otter-button>
-      <otter-button @click.native="sheetVisible2 = true" size="large">不带取消按钮的 action sheet</otter-button>
+      <mt-button @click.native="sheetVisible = true" size="large">点击上拉 action sheet</mt-button>
+      <mt-button @click.native="sheetVisible2 = true" size="large">不带取消按钮的 action sheet</mt-button>
     </div>
     <mt-actionsheet :actions="actions" v-model="sheetVisible"></mt-actionsheet>
     <mt-actionsheet :actions="actions2" v-model="sheetVisible2" cancel-text=""></mt-actionsheet>
@@ -12,14 +12,16 @@
 
 <style lang="stylus" scoped>
   .page-actionsheet
-      &-wrapper
-        padding: 0 20px;
-        position: absolute
-        width: 100%;
-        transform: translateY(-50%);
+    &-wrapper
+      padding: 0 20px;
+      position: absolute
+      top 50%
+      width: 100%;
+      transform: translateY(-50%);
 
-        button:first-child
-          margin-bottom: 20px;
+      button:first-child
+        margin-bottom: 20px;
+
 </style>
 
 <script type="text/babel">
