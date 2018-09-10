@@ -1,6 +1,6 @@
 <template>
   <div>
-    <otter-cell-input
+    <otter-field
       label="手机号"
       v-model="inputValue"
       maxlength="20"

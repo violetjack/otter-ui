@@ -7,11 +7,12 @@ import MtButton from './packages/button/mt'
 import Cell from './packages/cell'
 import MtCell from './packages/cell/mt'
 import CellSwipe from './packages/cell-swipe'
-import CellInput from './packages/cell-input'
+// import CellInput from './packages/cell-input'
 import Checklist from './packages/checklist'
 import ConfirmBox from './packages/message/confirm-box'
 import DatetimePicker from './packages/datetime-picker'
 import Field from './packages/field'
+import MtField from './packages/field/mt'
 import Header from './packages/header'
 // import IndexList from './packages/index-list'
 // import IndexSection from './packages/index-section'
@@ -55,11 +56,12 @@ const install = function (Vue, config = {}) {
   Vue.component(Cell.name, Cell)
   Vue.component(MtCell.name, MtCell)
   Vue.component(CellSwipe.name, CellSwipe)
-  Vue.component(CellInput.name, CellInput)
+  // Vue.component(CellInput.name, CellInput)
   Vue.component(Checklist.name, Checklist)
   Vue.component(ConfirmBox.name, ConfirmBox)
   Vue.component(DatetimePicker.name, DatetimePicker)
   Vue.component(Field.name, Field)
+  Vue.component(MtField.name, MtField)
   Vue.component(Header.name, Header)
   // Vue.component(IndexList.name, IndexList)
   // Vue.component(IndexSection.name, IndexSection)
@@ -100,7 +102,6 @@ export default {
   Article,
   Button,
   Cell,
-  CellInput,
   ConfirmBox,
   Input,
   Loading,

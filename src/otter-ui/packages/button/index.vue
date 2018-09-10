@@ -1,12 +1,12 @@
 <template>
   <div
     class="otter-button"
-    :class="[`otter-button--${type}${plain?'-plain':''}`, 'otter-button--' + size]"
+    :class="[`otter-button--${type}${plain?'-plain':''}`, 'otter-button--' + size, {'is-disabled': disabled}]"
     @click="handleClick"
     :disabled="disabled">
-    <div class="otter-button-text--base otter-button-text--color">
+    <span class="otter-button-text--base otter-button-text--color">
       <slot/>
-    </div>
+    </span>
   </div>
 </template>
 
@@ -34,18 +34,34 @@ export default {
   },
   methods: {
     handleClick(event) {
-      this.$emit('click', event)
+      if (!this.disabled) {
+        this.$emit('click', event)
+      }
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.otter-button {
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -ms-{prop} args
+  {prop} args
+
+.otter-button
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  flex-direction row
+  vendor('user-select', none)
+
+  &:active
+    opacity: .6
+
+  &-icon
+    vertical-align: middle;
+    display: inline-block;
 
 .otter-button--small {
   height: 44px;
@@ -65,7 +81,7 @@ export default {
 }
 
 .otter-button--primary {
-  background-image: linear-gradient(148deg, #6898f8 0%, #2c68e0 100%);
+  background: #3072F6;
 
   .otter-button-text--color {
     color: #FFFFFF;
@@ -73,7 +89,7 @@ export default {
 }
 
 .otter-button--success {
-  background-image: linear-gradient(147deg, #47CC95 0%, #26B478 100%);
+  background: #3BC48B;
 
   .otter-button-text--color {
     color: #FFFFFF;
@@ -109,6 +125,14 @@ export default {
 
   .otter-button-text--color {
     color: #F8F8F9;
+  }
+}
+
+.is-disabled {
+  opacity: .3
+
+  &:active {
+    opacity: .3
   }
 }
 </style>

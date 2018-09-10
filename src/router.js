@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 import Article from './views/Article.vue'
 import Button from './views/Button.vue'
 import Cell from './views/Cell.vue'
-import CellInput from './views/CellInput.vue'
+import Field from './views/Field.vue'
 import Input from './views/Input.vue'
 import Loading from './views/Loading.vue'
 import Message from './views/Message.vue'
@@ -37,9 +37,9 @@ export const compRoutes = [
     component: Cell
   },
   {
-    path: '/cell-input',
-    name: 'cell-input',
-    component: CellInput
+    path: '/field',
+    name: 'field',
+    component: Field
   },
   {
     path: '/input',

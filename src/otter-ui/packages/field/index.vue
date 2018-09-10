@@ -1,233 +1,161 @@
 <template>
-  <x-cell
-    class="mint-field"
-    :title="label"
-    v-clickoutside="doCloseActive"
-    :class="[{
-      'is-textarea': type === 'textarea',
-      'is-nolabel': !label
-    }]">
-    <textarea
-      @change="$emit('change', currentValue)"
-      ref="textarea"
-      class="mint-field-core"
-      :placeholder="placeholder"
-      v-if="type === 'textarea'"
-      :rows="rows"
-      :disabled="disabled"
-      :readonly="readonly"
-      v-model="currentValue">
-    </textarea>
-    <input
-      @change="$emit('change', currentValue)"
-      ref="input"
-      class="mint-field-core"
-      :placeholder="placeholder"
-      :number="type === 'number'"
-      v-else
-      :type="type"
-      @focus="active = true"
-      :disabled="disabled"
-      :readonly="readonly"
-      :value="currentValue"
-      @input="handleInput">
-    <div
-      @click="handleClear"
-      class="mint-field-clear"
-      v-if="!disableClear"
-      v-show="currentValue && type !== 'textarea' && active">
-      <i class="mintui mintui-field-error"></i>
+  <div class="otter-field">
+    <div class="otter-field-container">
+      <div class="otter-field-container--label">{{ label }}</div>
+      <div class="otter-field-container--input-container">
+        <input
+          :placeholder="placeholder"
+          v-model="currentValue"
+          :maxlength="maxlength"
+          class="otter-field-container--input"
+          @focus="handleFocus"
+          :onkeypress="onkeypress"
+          @blur="handleBlur">
+          <img v-show="currentValue !== ''" @click="currentValue = ''" class="otter-field-container--clear" src="./img/delete.png"/>
+      </div>  
     </div>
-    <span class="mint-field-state" v-if="state" :class="['is-' + state]">
-      <i class="mintui" :class="['mintui-field-' + state]"></i>
-    </span>
-    <div class="mint-field-other">
-      <slot></slot>
-    </div>
-  </x-cell>
+    <div class="otter-field-line otter-row-line-g"/>
+  </div>
 </template>
 
 <script>
-import XCell from 'mint-ui/packages/cell/index.js';
-import Clickoutside from 'mint-ui/src/utils/clickoutside';
-if (process.env.NODE_ENV === 'component') {
-  require('mint-ui/packages/cell/style.css');
-}
-
-/**
- * mt-field
- * @desc 编辑器，依赖 cell
- * @module components/field
- *
- * @param {string} [type=text] - field 类型，接受 text, textarea 等
- * @param {string} [label] - 标签
- * @param {string} [rows] - textarea 的 rows
- * @param {string} [placeholder] - placeholder
- * @param {string} [disabled] - disabled
- * @param {string} [readonly] - readonly
- * @param {string} [state] - 表单校验状态样式，接受 error, warning, success
- *
- * @example
- * <mt-field v-model="value" label="用户名"></mt-field>
- * <mt-field v-model="value" label="密码" placeholder="请输入密码"></mt-field>
- * <mt-field v-model="value" label="自我介绍" placeholder="自我介绍" type="textarea" rows="4"></mt-field>
- * <mt-field v-model="value" label="邮箱" placeholder="成功状态" state="success"></mt-field>
- */
 export default {
-  name: 'mt-field',
-
+  name: 'OtterField',
+  props: {
+    label: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: ''
+    },
+    maxlength: {
+      type: String,
+      default: '50'
+    },
+    onkeypress: {
+      type: String,
+      defalut: ''
+    },
+    placeholder: {
+      type: String,
+      default: ''
+    },
+  },
   data() {
     return {
-      active: false,
       currentValue: this.value
-    };
-  },
-
-  directives: {
-    Clickoutside
-  },
-
-  props: {
-    type: {
-      type: String,
-      default: 'text'
-    },
-    rows: String,
-    label: String,
-    placeholder: String,
-    readonly: Boolean,
-    disabled: Boolean,
-    disableClear: Boolean,
-    state: {
-      type: String,
-      default: 'default'
-    },
-    value: {},
-    attr: Object
-  },
-
-  components: { XCell },
-
-  methods: {
-    doCloseActive() {
-      this.active = false;
-    },
-
-    handleInput(evt) {
-      this.currentValue = evt.target.value;
-    },
-
-    handleClear() {
-      if (this.disabled || this.readonly) return;
-      this.currentValue = '';
     }
   },
-
   watch: {
     value(val) {
-      this.currentValue = val;
+      this.currentValue = val
     },
 
     currentValue(val) {
-      this.$emit('input', val);
+      this.$emit('input', val)
     },
-
-    attr: {
-      immediate: true,
-      handler(attrs) {
-        this.$nextTick(() => {
-          const target = [this.$refs.input, this.$refs.textarea];
-          target.forEach(el => {
-            if (!el || !attrs) return;
-            Object.keys(attrs).map(name => el.setAttribute(name, attrs[name]));
-          });
-        });
-      }
+  },
+  methods: {
+    handleInput(e) {
+      this.currentValue = e.target.value
+    },
+    handleFocus(e) {
+      this.$emit('focus', e)
+    },
+    handleBlur(e) {
+      this.$emit('blur', e)
+    },
+    handleKeypress(e) {
+      this.$emit('keypress', e)
     }
   }
-};
+}
 </script>
 
-<style lang="stylus">
-  @import "../../src/style/var.styl";
+<style lang="stylus" scoped>
+  .otter-field-container
+    display flex
+    justify-content space-between
+    align-items center
+    height 60px
+    padding 0 24px
 
-  .mint-field {
-      display: flex;
+    &--label
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      color: #101D37;
+      letter-spacing: 0;
 
-      .is-textarea {
-        align-items: inherit;
+    &--input-container
+      display flex
+      flex-direction row
+      align-items center
 
-        .mint-cell-title {
-          padding: 10px 0;
-        }
+    &--input
+      width: 130px;
+      height: 30px;
+      -weotterit-appearance: none;
+      background: none;
+      border: none;
+      box-sizing: border-box;
+      display: inline-block;
+      outline: none;
+      transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #101D37;
+      letter-spacing: 0;
+      text-align: right;
 
-        .mint-cell-value {
-          padding: 5px 0;
-        }
-      }
+    &--clear
+      width 14px
+      height 14px
 
-      .mint-cell-title {
-        width: 105px;
-        flex: none;
-      }
+    ::-weotterit-input-placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-      .mint-cell-value {
-        flex: 1;
-        color: inherit;
-        display: flex;
-      }
+    :-moz-placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-      &-core {
-        appearance: none;
-        border-radius: 0;
-        border: 0;
-        flex: 1;
-        outline: 0;
-        line-height: 1.6;
-        font-size: inherit;
-        width: 100%;
-      }
+    ::-moz-placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-      &-clear {
-        opacity: .2;
-      }
+    :-ms-input-placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-      &-state {
-        color: inherit;
-        margin-left: 20px;
+    ::-ms-input-placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-        .mintui {
-          font-size: 20px;
-        }
+    ::placeholder
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #9399A5;
+      letter-spacing: 0;
+      text-align: right;
 
-        .is-error {
-          color: $error-color;
-        }
-
-        .is-warning {
-          color: $warning-color;
-        }
-
-        .is-success {
-          color: $success-color;
-        }
-
-        .is-default {
-          margin-left: 0;
-        }
-      }
-
-      &-other {
-        position: relative
-        top 0
-        right 0
-      }
-
-      .is-nolabel {
-        .mint-cell-title {
-          display: none;
-        }
-      }
-    }
+  .otter-field-line
+    margin 0 24px
 
 </style>
