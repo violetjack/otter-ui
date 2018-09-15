@@ -16,14 +16,23 @@ export default {
   props: {
     type: {
       type: String,
-      default() {
-        return 'primary'
+      default: 'primary',
+      validator(value) {
+        return [
+          'primary',
+          'success',
+          'cancel'
+        ].indexOf(value) > -1;
       }
     },
     size: {
       type: String,
-      default() {
-        return 'normal'
+      default: 'normal',
+      validator(value) {
+        return [
+          'small',
+          'normal'
+        ].indexOf(value) > -1;
       }
     },
     plain: {

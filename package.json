@@ -9,6 +9,7 @@
   },
   "main": "lib/otter-ui.common.js",
   "dependencies": {
+    "date-fns": "^1.29.0",
     "mint-ui": "^2.2.13",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"

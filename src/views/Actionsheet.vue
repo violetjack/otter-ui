@@ -13,14 +13,13 @@
 <style lang="stylus" scoped>
   .page-actionsheet
     &-wrapper
-      padding: 0 20px;
       position: absolute
       top 50%
       width: 100%;
       transform: translateY(-50%);
 
-      button:first-child
-        margin-bottom: 20px;
+      .otter-button
+        margin: 10px 20px;
 
 </style>
 

@@ -2,7 +2,7 @@
   <div class="picker" :class="{ 'picker-3d': rotateEffect }">
     <div class="picker-toolbar" v-if="showToolbar"><slot></slot></div>
     <div class="picker-items">
-      <picker-slot v-for="slot in slots" :valueKey="valueKey" :key="slot" :values="slot.values || []" :text-align="slot.textAlign || 'center'" :visible-item-count="visibleItemCount" :class-name="slot.className" :flex="slot.flex" v-model="values[slot.valueIndex]" :rotate-effect="rotateEffect" :divider="slot.divider" :content="slot.content" :itemHeight="itemHeight" :default-index="slot.defaultIndex"></picker-slot>
+      <picker-slot v-for="(slot, index) in slots" :valueKey="valueKey" :key="index" :values="slot.values || []" :text-align="slot.textAlign || 'center'" :visible-item-count="visibleItemCount" :class-name="slot.className" :flex="slot.flex" v-model="values[slot.valueIndex]" :rotate-effect="rotateEffect" :divider="slot.divider" :content="slot.content" :itemHeight="itemHeight" :default-index="slot.defaultIndex"></picker-slot>
       <div class="picker-center-highlight" :style="{ height: itemHeight + 'px', marginTop: -itemHeight / 2 + 'px' }"></div>
     </div>
   </div>
@@ -64,6 +64,8 @@
 </style>
 
 <script type="text/babel">
+  import PickerSlot from './picker-slot.vue'
+
   export default {
     name: 'mt-picker',
 
@@ -106,6 +108,7 @@
         var slots = this.slots || [];
         var count = 0;
         var target;
+        console.log(this.$children)
         var children = this.$children.filter(child => child.$options.name === 'picker-slot');
 
         slots.forEach(function(slot, index) {
@@ -186,7 +189,7 @@
     },
 
     components: {
-      PickerSlot: require('./picker-slot.vue')
+      PickerSlot
     }
   };
 </script>

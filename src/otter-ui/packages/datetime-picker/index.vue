@@ -17,41 +17,41 @@
   @import "../../src/style/var.styl";
 
   .mint-datetime {
-      width: 100%;
+    width: 100%;
 
-      .picker-slot-wrapper, .picker-item {
-        backface-visibility: hidden;
-      }
-
-      .picker-toolbar {
-        border-bottom: solid 1px #eaeaea;
-      }
-
-      &-action {
-        display: inline-block;
-        width: 50%;
-        text-align: center;
-        line-height: 40px;
-        font-size: 16px;
-        color: $color-blue;
-      }
-
-      &-cancel {
-        float: left;
-      }
-
-      &-confirm {
-        float: right;
-      }
+    .picker-slot-wrapper, .picker-item {
+      backface-visibility: hidden;
     }
+
+    .picker-toolbar {
+      border-bottom: solid 1px #eaeaea;
+    }
+
+    &-action {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 16px;
+      color: $color-blue;
+    }
+
+    &-cancel {
+      float: left;
+    }
+
+    &-confirm {
+      float: right;
+    }
+  }
 </style>
 
 <script type="text/babel">
-  import picker from 'mint-ui/packages/picker/index.js';
-  import popup from 'mint-ui/packages/popup/index.js';
+  import picker from '../picker/index.js';
+  import popup from '../popup/index.vue';
   if (process.env.NODE_ENV === 'component') {
-    require('mint-ui/packages/picker/style.css');
-    require('mint-ui/packages/popup/style.css');
+    require('../picker/style.css');
+    require('../popup/style.css');
   }
 
   const FORMAT_MAP = {
