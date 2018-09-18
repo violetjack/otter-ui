@@ -1,49 +1,62 @@
 {
-  "name": "otter-ui",
-  "version": "0.1.1",
-  "private": true,
+  "name": "otter-ui-ke",
+  "description": "Mobile UI elements for vue.js",
+  "version": "0.1.2",
+  "author": "VioletJack <475966597@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/otter-ui.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --dest lib --name otter-ui src/otter-ui/index.js",
-    "lint": "vue-cli-service lint"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "main": "lib/otter-ui.common.js",
   "dependencies": {
-    "date-fns": "^1.29.0",
-    "mint-ui": "^2.2.13",
-    "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "array-find-index": "^1.0.2",
+    "raf.js": "0.0.4",
+    "vue-lazyload": "^1.0.1",
+    "date-fns": "^1.29.0"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-rc.4",
-    "@vue/cli-plugin-eslint": "^3.0.0-rc.4",
-    "@vue/cli-service": "^3.0.0-rc.4",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.16"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+  "peerDependencies": {
+    "vue": "^2.3.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint": "^3.12.2",
+    "extract-text-webpack-plugin": "beta",
+    "fastclick": "^1.0.6",
+    "file-loader": "^0.9.0",
+    "gh-pages": "^0.11.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "json-templater": "^1.0.4",
+    "lerna": "2.0.0-beta.18",
+    "my-local-ip": "^1.0.0",
+    "postcss": "^5.2.0",
+    "postcss-loader": "^0.13.0",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "uppercamelcase": "^1.1.0",
+    "url-loader": "^0.5.7",
+    "vue": "^2.3.2",
+    "vue-loader": "12.0.3",
+    "vue-router": "^2.0.0",
+    "vue-template-compiler": "^2.3.2",
+    "vue-template-es2015-compiler": "^1.4.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-shell-plugin": "^0.4.3"
+  }
 }
