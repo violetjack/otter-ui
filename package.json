@@ -1,7 +1,7 @@
 {
   "name": "otter-ui-ke",
   "description": "Mobile UI elements for vue.js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "author": "VioletJack <475966597@qq.com>",
   "license": "MIT",
   "private": false,
@@ -10,6 +10,11 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/violetjack/otter-ui.git"
+  },
+  "homepage": "https://github.com/violetjack/otter-ui/#readme",
   "dependencies": {
     "array-find-index": "^1.0.2",
     "raf.js": "0.0.4",
