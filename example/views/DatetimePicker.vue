@@ -8,26 +8,26 @@
       <otter-button @click.native="open('picker4')">自定义模板</otter-button>
       <otter-button @click.native="open('picker5')">设定初始值</otter-button>
     </div>
-    <mt-datetime-picker
+    <otter-datetime-picker
       ref="picker1"
       v-model="value"
       :closeOnClickModal="false"
       @visible-change="handleVisibleChange"
       @confirm="handleChange">
-    </mt-datetime-picker>
-    <mt-datetime-picker
+    </otter-datetime-picker>
+    <otter-datetime-picker
       ref="picker2"
       type="date"
       v-model="value2"
       @confirm="handleChange">
-    </mt-datetime-picker>
-    <mt-datetime-picker
+    </otter-datetime-picker>
+    <otter-datetime-picker
       ref="picker3"
       type="time"
       v-model="value3"
       @confirm="handleChange">
-    </mt-datetime-picker>
-    <mt-datetime-picker
+    </otter-datetime-picker>
+    <otter-datetime-picker
       ref="picker4"
       type="date"
       v-model="value4"
@@ -35,13 +35,13 @@
       month-format="{value} 月"
       date-format="{value} 日"
       @confirm="handleChange">
-    </mt-datetime-picker>
-    <mt-datetime-picker
+    </otter-datetime-picker>
+    <otter-datetime-picker
       ref="picker5"
       type="time"
       v-model="value5"
       @confirm="handleChange">
-    </mt-datetime-picker>
+    </otter-datetime-picker>
   </div>
 </template>
 

@@ -5,8 +5,8 @@
       <otter-button @click.native="sheetVisible = true">点击上拉 action sheet</otter-button>
       <otter-button @click.native="sheetVisible2 = true">不带取消按钮的 action sheet</otter-button>
     </div>
-    <mt-actionsheet :actions="actions" v-model="sheetVisible"></mt-actionsheet>
-    <mt-actionsheet :actions="actions2" v-model="sheetVisible2" cancel-text=""></mt-actionsheet>
+    <otter-actionsheet :actions="actions" v-model="sheetVisible"></otter-actionsheet>
+    <otter-actionsheet :actions="actions2" v-model="sheetVisible2" cancel-text=""></otter-actionsheet>
   </div>
 </template>
 

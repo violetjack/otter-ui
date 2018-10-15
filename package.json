@@ -1,7 +1,7 @@
 {
   "name": "otter-ui-ke",
   "description": "Mobile UI elements for vue.js",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "author": "VioletJack <475966597@qq.com>",
   "license": "MIT",
   "private": false,
@@ -17,9 +17,10 @@
   "homepage": "https://github.com/violetjack/otter-ui/#readme",
   "dependencies": {
     "array-find-index": "^1.0.2",
+    "date-fns": "^1.29.0",
+    "mint-ui": "^2.2.13",
     "raf.js": "0.0.4",
-    "vue-lazyload": "^1.0.1",
-    "date-fns": "^1.29.0"
+    "vue-lazyload": "^1.0.1"
   },
   "peerDependencies": {
     "vue": "^2.3.0"
