@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-const ToastConstructor = Vue.extend(require('./toast.vue').default)
+const ToastConstructor = Vue.extend(require('./toast.vue'))
 
 const toastPool = []
 

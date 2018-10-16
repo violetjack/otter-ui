@@ -1,0 +1,49 @@
+.mint-button {
+  border-radius: 5px;
+  height: 50px;
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+}
+
+.mint-button--default {
+  background: #3072F6;
+  color: #FFFFFF;
+}
+
+.mint-button--default.is-plain {
+  border: 1px solid #3072F6;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  color: #3072F6;
+}
+
+.mint-button--primary {
+  background: #3BC48B;
+  color: #FFFFFF;
+}
+
+.mint-button--primary.is-plain {
+  border: 1px solid #3BC48B;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  color: #3BC48B;
+}
+
+.mint-button--danger {
+  background: #F8F8F9;
+  color: #9399A5;
+}
+
+.mint-button--danger.is-plain {
+  border: 1px solid #F8F8F9;
+  background-color: #9399A5;
+  box-shadow: none;
+  color: #F8F8F9;
+}
+
+.mint-button--small {
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  height: 44px;
+  border-radius: 4px;
+}

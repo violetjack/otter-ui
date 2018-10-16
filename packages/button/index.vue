@@ -1,27 +1,32 @@
 <template>
-  <div
-    class="otter-button"
-    :class="[`otter-button--${type}${plain?'-plain':''}`, 'otter-button--' + size, {'is-disabled': disabled}]"
-    @click="handleClick"
-    :disabled="disabled">
-    <span class="otter-button-text--base otter-button-text--color">
-      <slot/>
-    </span>
-  </div>
+  <mt-button>
+
+  </mt-button>
 </template>
 
 <script>
 export default {
-  name: 'OtterButton',
+  name: 'otter-button',
+
+  methods: {
+    handleClick(evt) {
+      this.$emit('click', evt);
+    }
+  },
+
   props: {
+    icon: String,
+    disabled: Boolean,
+    nativeType: String,
+    plain: Boolean,
     type: {
       type: String,
-      default: 'primary',
+      default: 'default',
       validator(value) {
         return [
-          'primary',
-          'success',
-          'cancel'
+          'default',
+          'danger',
+          'primary'
         ].indexOf(value) > -1;
       }
     },
@@ -31,24 +36,13 @@ export default {
       validator(value) {
         return [
           'small',
-          'normal'
+          'normal',
+          'large'
         ].indexOf(value) > -1;
-      }
-    },
-    plain: {
-      type: Boolean,
-      default: false
-    },
-    disabled: Boolean,
-  },
-  methods: {
-    handleClick(event) {
-      if (!this.disabled) {
-        this.$emit('click', event)
       }
     }
   }
-}
+};
 </script>
 
 <style lang="stylus" scoped>

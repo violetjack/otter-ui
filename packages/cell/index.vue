@@ -84,7 +84,7 @@ export default {
 
 <style lang="stylus" scoped>
 .otter-cell {
-  height: 60px;
+  min-height: 60px;
   padding-left: 24px;
   padding-right: 24px;
   background: #ffffff;
@@ -98,7 +98,7 @@ export default {
 }
 
 .otter-cell-content {
-  height: 59px;
+  height: 59.5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,12 +111,15 @@ export default {
   align-items: center;
   flex-wrap: nowrap;
 }
+
 .otter-cell-area-left {
   min-width 80px
 }
+
 .otter-cell-area-right {
   flex: 1;
   justify-content flex-end
+  height 100%
 }
 
 .otter-cell-line {
@@ -150,16 +153,16 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content flex-end
-  height: 49px;
+  height 100%
 
   &__text
-    min-height: 19px;
+    max-height 40px;
     font-family: PingFangSC-Regular;
     font-size: 16px;
     line-height 20px
     color: #101d37;
     letter-spacing: 0;
-    overflow: auto;
+    overflow: hidden;
 
 .otter-cell-value-default {
   font-family: PingFangSC-Regular;

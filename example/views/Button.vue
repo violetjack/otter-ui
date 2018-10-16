@@ -1,12 +1,17 @@
 <template>
   <div class="button-container">
-    <otter-button>primary</otter-button>
-    <otter-button type="success">success</otter-button>
-    <otter-button type="cancel">cancel</otter-button>
-    <otter-button type="primary" plain>primary</otter-button>
-    <otter-button type="success" plain>success</otter-button>
-    <otter-button type="cancel" plain>cancel</otter-button>
-    <otter-button size="small">small</otter-button>
+    <otter-button type="default" size="large">关注</otter-button>
+    <otter-button type="primary" size="large">primary</otter-button>
+    <otter-button type="danger" size="large">danger</otter-button>
+    <otter-button type="default" size="large" plain>default</otter-button>
+    <otter-button type="primary" size="large" plain>primary</otter-button>
+    <otter-button type="danger" size="large" plain>danger</otter-button>
+    <otter-button type="default">default</otter-button>
+    <otter-button type="primary">primary</otter-button>
+    <otter-button type="danger">danger</otter-button>
+    <otter-button type="default" size="small">default</otter-button>
+    <otter-button type="primary" size="small">primary</otter-button>
+    <otter-button type="danger" size="small">danger</otter-button>
   </div>
 </template>
 
@@ -24,6 +29,6 @@ export default {
   .button-container
     padding 25px;
   
-    .otter-button
+    .mint-button
       margin 10px 0
 </style>

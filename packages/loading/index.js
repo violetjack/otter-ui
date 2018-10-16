@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-const Indicator = Vue.extend(require('./loading.vue').default)
+const Indicator = Vue.extend(require('./loading.vue'))
 
 let instance
 

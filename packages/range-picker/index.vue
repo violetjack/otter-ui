@@ -1,6 +1,6 @@
 <template>
-  <mt-popup v-model="visible" :closeOnClickModal="closeOnClickModal" position="bottom" class="mint-datetime">
-    <mt-picker
+  <otter-popup v-model="visible" :closeOnClickModal="closeOnClickModal" position="bottom" class="mint-datetime">
+    <otter-picker
       :slots="dateSlots"
       @change="onChange"
       :visible-item-count="visibleItemCount"
@@ -9,8 +9,8 @@
       show-toolbar>
       <span class="mint-datetime-action mint-datetime-cancel" @click="visible = false;$emit('cancel')">{{ cancelText }}</span>
       <span class="mint-datetime-action mint-datetime-confirm" @click="confirm">{{ confirmText }}</span>
-    </mt-picker>
-  </mt-popup>
+    </otter-picker>
+  </otter-popup>
 </template>
 
 <style lang="stylus">
@@ -47,8 +47,7 @@
 </style>
 
 <script type="text/babel">
-  import picker from '../picker/index.js';
-  import popup from '../popup/index.vue';
+  import { Picker, Popup } from 'mint-ui';
   import { format } from 'date-fns'
 
   // if (process.env.NODE_ENV === 'component') {
@@ -109,8 +108,8 @@
     },
 
     components: {
-      'mt-picker': picker,
-      'mt-popup': popup
+      'otter-picker': Picker,
+      'otter-popup': Popup
     },
 
     methods: {

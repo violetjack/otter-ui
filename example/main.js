@@ -4,6 +4,7 @@ import OtterUI from '../src/index.js'
 import './assets/common.css'
 import App from './App.vue'
 import router from './router'
+import './otter.css'
 
 Vue.use(OtterUI)
 
