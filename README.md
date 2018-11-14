@@ -13,7 +13,7 @@ npm install otter-ui-ke -S
 导入所有组件。
 
 ```js
-import App from './App.vue'
+import Vue from 'vue'
 import Otter from 'otter-ui-ke'
 
 Vue.use(Otter)
@@ -37,6 +37,21 @@ npm run build
 npm login
 npm publish
 ```
+
+## 说明
+
+鉴于现有组件库拥有更高的质量，所以减少不必要的重复造轮子，组件库中很多组件直接引用 mint-ui 的组件（只是改了名字 otter-button）。本组件库要实现的东西如下：
+
+* 集成 mint-ui 组件库，支持单个组件加载。
+* 使用 CSS，覆盖的方式将 mint-ui 中的一些样式进行修改成贝壳的规范。
+* **重点：实现定制化界面组件和特殊功能组件。**
+
+## 开发计划
+
+* 发布到 knpm
+* 清理冗余代码。
+* 覆盖单元测试。
+* 整理组件文档。
 
 ## License
 

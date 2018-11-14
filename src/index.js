@@ -1,6 +1,5 @@
 import 'packages/index.css'
 import Article from 'packages/article'
-// import Button from 'packages/button'
 import Cell from 'packages/cell'
 import ConfirmBox from 'packages/message/confirm-box'
 import Field from 'packages/field'
